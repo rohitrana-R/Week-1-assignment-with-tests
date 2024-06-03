@@ -10,3 +10,31 @@ Hint - use Date class exposed in JS
 function calculateTime(n) {
     return 0.01;
 }
+
+/*
+ans for this 
+*/
+
+function calculateTime(n) {
+    // Get the start time
+    const startTime = new Date();
+
+    // Calculate the sum from 1 to n
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        sum += i;
+    }
+
+    // Get the end time
+    const endTime = new Date();
+
+    // Calculate the elapsed time in seconds
+    const timeInSeconds = (endTime - startTime) / 1000;
+    
+    return timeInSeconds;
+}
+
+// Example usage
+console.log(calculateTime(100)); // Sum from 1-100
+console.log(calculateTime(100000)); // Sum from 1-100000
+console.log(calculateTime(1000000000)); // Sum from 1-1000000000
